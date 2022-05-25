@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <center>
+      <table>
+        <Header/>
+          <NewsLists />
+          <AddButton/>
+        <Footer/>
+      </table>
+    </center>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NewsLists from './components/NewsList.vue'
+import AddButton from './components/AddButton.vue'
+import Footer from './layout/Footer.vue';
+import Header from './layout/Header.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NewsLists , 
+    Footer , 
+    Header, 
+    AddButton
   }
 }
 </script>
@@ -25,4 +37,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+table {
+    width: 800px;
+  } 
 </style>
